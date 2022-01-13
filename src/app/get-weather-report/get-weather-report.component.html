@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-9" style="margin: 100px 80px 30px;" >
+        <mat-form-field appearance="fill" [style.width.px]=500>
+            <mat-label>Select City</mat-label>
+            <mat-select [formControl]="weatherControl" (selectionChange)="onChange($event.value)" >
+
+                <!-- <mat-option>--</mat-option> -->
+                <mat-option *ngFor="let cities of city "[value]="cities.name" >
+                  {{cities.name}}
+                </mat-option>
+
+                </mat-select>
+            
+            
+            </mat-form-field>          
+     
+    </div>
+
+    <div class="row" *ngIf="weatherData">
+
+      <div class="col-md-6 text-center">
+        <h1 class="text-primary">Weather</h1>
+        <h3>{{weatherData?.weather[0].main}}</h3>
+
+      </div>
+
+      <div class="row ">
+        <div class="col-md-6 text-center">
+        <h1 class="text-danger">Temperature</h1>
+        <h3>{{weatherData.main.temp}} kelvin</h3>
+      </div>
+      </div>
+     
+  
+          
+    </div>
+
+ 
+
+</div>

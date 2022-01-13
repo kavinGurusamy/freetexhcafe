@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-color{
+    color: black !important;
+}
+
+.nav-bar-background{
+    background-color: #cec8da;
+}
+
+a{
+    text-decoration: none;
+}
+
+.f1-font{
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.logo-padding{
+    padding-left: 100px;
+}
